@@ -19,7 +19,7 @@ export default function Login() {
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
                     marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:10, borderWidth:2, paddingLeft:'5%'
+                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
                 }}></TextInput>
 
                 <Text style={{
@@ -28,7 +28,7 @@ export default function Login() {
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
                     marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:10, borderWidth:2, paddingLeft:'5%'
+                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
                 }}></TextInput>
                 {!error &&
                 <Text style={{
@@ -37,7 +37,7 @@ export default function Login() {
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '20%', marginTop: '5%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:10
+                    paddingVertical:'2.5%', borderRadius:5
                 }} onPress={()=>{navigation.navigate('Locationpref')}}>Login</Text>
             </View>
             <View style={{display:'flex', flexDirection:'row', alignSelf:'center'}}>

@@ -82,7 +82,7 @@ export default function Locationpref() {
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '15%', marginTop: '5%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:10
+                    paddingVertical:'2.5%', borderRadius:5
                 }} onPress={()=>{console.log('Here');}}>Next</Text>
                  
             </View>

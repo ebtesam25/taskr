@@ -21,7 +21,7 @@ export default function Profileset1() {
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
                     marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:10, borderWidth:2, paddingLeft:'5%'
+                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
                 }}></TextInput>
 
                  <Text style={{
@@ -30,7 +30,7 @@ export default function Profileset1() {
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
                     marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:10, borderWidth:2, paddingLeft:'5%'
+                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
                 }}></TextInput>
 
                 <Text style={{
@@ -39,7 +39,7 @@ export default function Profileset1() {
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
                     marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:10, borderWidth:2, paddingLeft:'5%'
+                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
                 }}></TextInput>
                 
                 <Text style={{
@@ -48,14 +48,14 @@ export default function Profileset1() {
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
                     marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:10, borderWidth:2, paddingLeft:'5%'
+                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
                 }} ></TextInput>
 
               
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:10
+                    paddingVertical:'2.5%', borderRadius:5
                 }} onPress={()=>{navigation.navigate('Profileset2')}}>Next</Text>
             </View>
            

@@ -17,17 +17,17 @@ export default function Orientdone() {
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '15%', marginTop: '5%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:10
+                    paddingVertical:'2.5%', borderRadius:5
                 }} onPress={()=>{navigation.navigate('Type')}}>Sign Up</Text>
                  <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '25%', marginTop: '2.5%', color:'#074EE8', borderWidth:2,
-                    paddingVertical:'2.5%', borderRadius:10, borderColor:'#074EE8'
+                    paddingVertical:'2.5%', borderRadius:5, borderColor:'#074EE8'
                 }}>Sign Up with Google</Text>
                  <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '25%', marginTop: '2.5%', color:'#074EE8', borderWidth:2,
-                    paddingVertical:'2.5%', borderRadius:10, borderColor:'#074EE8'
+                    paddingVertical:'2.5%', borderRadius:5, borderColor:'#074EE8'
                 }}>Sign Up with Text</Text>
             </View>
             <View style={{display:'flex', flexDirection:'row', alignSelf:'center'}}>

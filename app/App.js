@@ -15,6 +15,9 @@ import TaskBoard from './src/screens/task_board';
 import Type from './src/screens/type';
 import Profileset1 from './src/screens/profileset1';
 import Profileset2 from './src/screens/profileset2';
+import Profileset3 from './src/screens/profileset3';
+import Profileset4 from './src/screens/prpfileset4';
+import Profileallset from './src/screens/profileallset';
 
 const Stack = createStackNavigator();
 
@@ -66,6 +69,21 @@ function MyStack() {
       <Stack.Screen 
         name="Profileset2" 
         component={Profileset2} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Profileset3" 
+        component={Profileset3} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Profileset4" 
+        component={Profileset4} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Profileallset" 
+        component={Profileallset} 
         options={{ headerShown: false}} 
       />
        
