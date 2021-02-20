@@ -11,12 +11,16 @@ import Login from './src/screens/login';
 import Locationpref from './src/screens/locationpref';
 
 
+import TaskBoard from './src/screens/task_board';
+
 const Stack = createStackNavigator();
 
 function MyStack() {
   return (
-    <Stack.Navigator>
-        <Stack.Screen 
+    <Stack.Navigator
+      initialRouteName="TaskBoard"
+    >
+      <Stack.Screen 
         name="Welcome" 
         component={Welcome} 
         options={{ headerShown: false}} 
@@ -47,6 +51,11 @@ function MyStack() {
         options={{ headerShown: false}} 
       />
        
+      <Stack.Screen
+        name="TaskBoard"
+        component={TaskBoard}
+        options={{ headerShown: false}} 
+      />
        
 
 
