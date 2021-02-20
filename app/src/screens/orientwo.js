@@ -5,7 +5,7 @@ import Svg, { Line } from 'react-native-svg';
 import { Icon } from 'react-native-elements'
 
 
-export default function Welcome() {
+export default function Orientwo() {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
@@ -13,21 +13,22 @@ export default function Welcome() {
             <View style={{ marginTop: '10%' }}>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center'
-                }}>Welcome to TaskR</Text>
+                }}>Lorem Ipsum</Text>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '10%', marginTop: '2.5%'
                 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed.</Text>
             </View>
-            <View style={{display:'flex', flexDirection:'row', alignSelf:'center', marginLeft:'10%'}}>
+            <View style={{display:'flex', flexDirection:'row', alignSelf:'center'}}>
+            <Text onPress={()=>{navigation.navigate('Welcome')}} style={{marginTop:'12.5%', marginRight:'7.5%'}}><Icon name='arrowleft' type="ant-design" color='#323232' /></Text>
             <Svg height="20" width="200"
                     style={{
                         alignSelf: 'center', marginTop: '15%'
                     }}>
-                        <Line x1="0" y1="0" x2="50" y2="0" stroke="#074EE8" strokeWidth="10"/>
-                        <Line x1="50" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
+                        <Line x1="0" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
+                        <Line x1="50" y1="0" x2="100" y2="0" stroke="#074EE8" strokeWidth="10"/>  
                 </Svg>
-                <Text onPress={()=>{navigation.navigate('Orientwo')}} style={{marginTop:'12.5%', marginLeft:'7.5%'}}><Icon name='arrowright' type="ant-design" color='#323232' /></Text>
+                <Text onPress={()=>{navigation.navigate('Orienthree')}} style={{marginTop:'12.5%', marginLeft:'7.5%'}}><Icon name='arrowright' type="ant-design" color='#323232' /></Text>
             </View>
         </View>
     );
