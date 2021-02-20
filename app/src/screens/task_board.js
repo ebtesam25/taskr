@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   FlatList,
   StyleSheet, 
@@ -7,6 +7,7 @@ import {
   View, 
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { getItem } from '../util'
 
 const TaskItems = ({ taskList }) => {
   const iconNames = {
@@ -22,7 +23,7 @@ const TaskItems = ({ taskList }) => {
         return (
           <React.Fragment key={i}>
             { i !== 0 && <Icon style={taskItemStyles.icon} name="keyboard-arrow-right" size={20} /> }
-            <Icon style={taskItemStyles.icon} name={iconNames[task]} size={25} />
+            <Icon style={taskItemStyles.icon} name={iconNames[task.taskName]} size={25} />
           </React.Fragment>
         )
       })  
@@ -43,9 +44,9 @@ const taskItemStyles = StyleSheet.create({
   },
 })
 
-const Task = ({ payment, taskList, timeEst, style }) => {
+const Task = ({ payment, taskList, timeEst, navigation, style }) => {
   return (
-    <TouchableHighlight onPress={() => console.log('wat')}>
+    <TouchableHighlight onPress={() => navigation.push('TaskDetails')}>
       <View style={[taskStyles.container, style]}>
         <View style={taskStyles.row}>
           <TaskItems taskList={taskList} />
@@ -87,29 +88,23 @@ const taskStyles = StyleSheet.create({
   timeEst: {},
 });
 
-// do we need the homes? Multiple homes for different people?
-const testTask = {
-  payment: 20,
-  taskList: [
-    'shopping',
-    'library',
-    'home',
-    'home',
-  ],
-  timeEst: 30,
-};
-const tasks = [
-  testTask, testTask, testTask, testTask, testTask, testTask, testTask, testTask, testTask, testTask, testTask, testTask, 
-];
+export default ({ navigation }) => {
+  const [tasks, setTasks] = useState([])
 
-export default (props) => {
+  useEffect(() => {
+    getItem('taskRunnerTasks').then(tasks => {
+      if (tasks)
+        setTasks(tasks)
+    })
+  }, [])
+
   const renderTask = ({ index, item: task }) => {
-    return <Task key={index} style={styles.task} {...task} />
+    return <Task key={index} style={styles.task} navigation={navigation} {...task} />
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Task Board</Text>
+      {/* <Text style={styles.title}>Task Board</Text> */}
       <FlatList
         style={styles.list}
         data={tasks}
@@ -136,6 +131,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   list: {
+    paddingTop: 20,
     paddingHorizontal: 20,
   },
 });

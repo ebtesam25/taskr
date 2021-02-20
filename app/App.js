@@ -4,8 +4,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Welcome from './src/screens/welcome';
 import TaskBoard from './src/screens/task_board';
+import TaskDetails from './src/screens/task_details';
+import { useTestData } from './src/data/data';
 
 const Stack = createStackNavigator();
+useTestData()
 
 function MyStack() {
   return (
@@ -20,12 +23,13 @@ function MyStack() {
       <Stack.Screen
         name="TaskBoard"
         component={TaskBoard}
-        options={{ headerShown: false}} 
+        options={{ title: 'Task Board', headerTitleAlign: 'center' }} 
       />
-       
-
-
-
+      <Stack.Screen
+        name="TaskDetails"
+        component={TaskDetails}
+        options={{ title: 'Task Details', headerTitleAlign: 'center' }} 
+      />
     </Stack.Navigator>
   );
 }
