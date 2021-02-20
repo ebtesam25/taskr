@@ -18,7 +18,7 @@ export default function Orientdone() {
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '15%', marginTop: '5%', backgroundColor:'#074EE8', color:'#FFF',
                     paddingVertical:'2.5%', borderRadius:10
-                }} onPress={()=>{navigation.navigate('Login')}}>Sign Up</Text>
+                }} onPress={()=>{navigation.navigate('Type')}}>Sign Up</Text>
                  <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '25%', marginTop: '2.5%', color:'#074EE8', borderWidth:2,

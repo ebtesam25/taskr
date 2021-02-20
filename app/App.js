@@ -12,13 +12,16 @@ import Locationpref from './src/screens/locationpref';
 
 
 import TaskBoard from './src/screens/task_board';
+import Type from './src/screens/type';
+import Profileset1 from './src/screens/profileset1';
+import Profileset2 from './src/screens/profileset2';
 
 const Stack = createStackNavigator();
 
 function MyStack() {
   return (
     <Stack.Navigator
-      initialRouteName="TaskBoard"
+      initialRouteName="Welcome"
     >
       <Stack.Screen 
         name="Welcome" 
@@ -48,6 +51,21 @@ function MyStack() {
       <Stack.Screen 
         name="Locationpref" 
         component={Locationpref} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Type" 
+        component={Type} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Profileset1" 
+        component={Profileset1} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Profileset2" 
+        component={Profileset2} 
         options={{ headerShown: false}} 
       />
        
