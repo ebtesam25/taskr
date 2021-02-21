@@ -18,6 +18,17 @@ import Profileset2 from './src/screens/profileset2';
 import Profileset3 from './src/screens/profileset3';
 import Profileset4 from './src/screens/prpfileset4';
 import Profileallset from './src/screens/profileallset';
+import Vehicletype from './src/screens/vehicletype';
+import Vehicledoc from './src/screens/vehicledoc';
+import Helpee1 from './src/screens/helpee1';
+import Helpee2 from './src/screens/helpee2';
+import Helpee3 from './src/screens/helpee3';
+import Helpee4 from './src/screens/helpee4';
+import Helpee5 from './src/screens/helpee5';
+import Helpee6 from './src/screens/helpee6';
+import Helpee7 from './src/screens/helpee7';
+import Helpeerate from './src/screens/helpeerate';
+import HelpeeRateSubmit from './src/screens/helpeeratesubmit';
 
 const Stack = createStackNavigator();
 
@@ -84,6 +95,61 @@ function MyStack() {
       <Stack.Screen 
         name="Profileallset" 
         component={Profileallset} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Vehicletype" 
+        component={Vehicletype} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Vehicledoc" 
+        component={Vehicledoc} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Helpee1" 
+        component={Helpee1} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Helpee2" 
+        component={Helpee2} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Helpee3" 
+        component={Helpee3} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Helpee4" 
+        component={Helpee4} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Helpee5" 
+        component={Helpee5} 
+        options={{ headerShown: false}} 
+      />
+        <Stack.Screen 
+        name="Helpee6" 
+        component={Helpee6} 
+        options={{ headerShown: false}} 
+      />
+       <Stack.Screen 
+        name="Helpee7" 
+        component={Helpee7} 
+        options={{ headerShown: false}} 
+      />
+       <Stack.Screen 
+        name="Helpeerate" 
+        component={Helpeerate} 
+        options={{ headerShown: false}} 
+      />
+       <Stack.Screen 
+        name="Helpeeratesubmit" 
+        component={HelpeeRateSubmit} 
         options={{ headerShown: false}} 
       />
        
