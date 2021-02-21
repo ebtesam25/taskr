@@ -23,7 +23,7 @@ export default function Profileallset() {
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '20%', marginTop: '10%', backgroundColor:'#074EE8', color:'#FFF',
                     paddingVertical:'2.5%', borderRadius:5
-                }} onPress={()=>{navigation.navigate('Profileset2')}}>Start Running Tasks</Text>
+                }} onPress={()=>{navigation.navigate('Helpee1')}}>Start Running Tasks</Text>
             <Svg height="20" width="200"
                     style={{
                         alignSelf: 'center', marginTop: '15%'

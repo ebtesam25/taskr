@@ -74,7 +74,7 @@ export default function Profileset2() {
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#074EE8', color:'#FFF',
                     paddingVertical:'2.5%', borderRadius:5
-                }} onPress={()=>{navigation.navigate('Profileset3')}}>Next</Text>
+                }} onPress={()=>{navigation.navigate('Vehicletype')}}>Next</Text>
             </View>
            
             <View style={{display:'flex', flexDirection:'row', alignSelf:'center', marginLeft:'10%'}}>
