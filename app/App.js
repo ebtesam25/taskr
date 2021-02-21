@@ -12,6 +12,9 @@ import Locationpref from './src/screens/locationpref';
 
 
 import TaskBoard from './src/screens/task_board';
+import TaskDetails from './src/screens/task_details';
+import GroceryList from './src/screens/grocery_list'
+import { useTestData } from './src/data/data';
 import Type from './src/screens/type';
 import Profileset1 from './src/screens/profileset1';
 import Profileset2 from './src/screens/profileset2';
@@ -31,6 +34,7 @@ import Helpeerate from './src/screens/helpeerate';
 import HelpeeRateSubmit from './src/screens/helpeeratesubmit';
 
 const Stack = createStackNavigator();
+useTestData()
 
 function MyStack() {
   return (
@@ -156,12 +160,18 @@ function MyStack() {
       <Stack.Screen
         name="TaskBoard"
         component={TaskBoard}
-        options={{ headerShown: false}} 
+        options={{ title: 'Task Board', headerTitleAlign: 'center' }} 
       />
-       
-
-
-
+      <Stack.Screen
+        name="TaskDetails"
+        component={TaskDetails}
+        options={{ title: 'Task Details', headerTitleAlign: 'center' }} 
+      />
+      <Stack.Screen
+        name="GroceryList"
+        component={GroceryList}
+        options={{ title: 'Grocery List', headerTitleAlign: 'center', headerStyle: { elevation: 0, shadowOpacity: 0 } }} 
+      />
     </Stack.Navigator>
   );
 }
