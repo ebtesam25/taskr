@@ -11,6 +11,8 @@ import {
   Button, TouchableRipple
 } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { testTask } from '../data/data'
+import Confirmation from './confirmation'
 
 const TODO = [
   {
@@ -81,6 +83,7 @@ export default ({ route, navigation }) => {
   const [totalItems, setTotalItems] = useState(0)
   const [cart, setCart] = useState([])
   const [tab, setTab] = useState('todo')
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     let sum = 0
@@ -133,36 +136,63 @@ export default ({ route, navigation }) => {
     }
   }
 
+  const nextScreen = () => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(1)
+      //navigation.push('Confirmation', { task, text: 'Order is confirmed complete.' })
+    }, 1000)
+  }
+
   return (
-    <View style={styles.expand}>
-      <View style={styles.row}>
-        <NavBtn text="To do" active={tab == 'todo'} onPress={() => setTab('todo')} />
-        <NavBtn text="Added to cart" active={tab == 'cart'} onPress={() => setTab('cart')} />
-      </View>
-      {
-        tab == 'todo' ?
-        <SectionList
-          style={styles.expand}
-          sections={todo}
-          keyExtractor={(item, i) => ''+i}
-          renderItem={({item}) => <FoodItem item={item} allowAdd onAdd={() => removeItem(item)} />}
-          renderSectionHeader={renderSectionHeader}
-        />
-        :
-        <FlatList
-          style={styles.expand}
-          data={cart}
-          keyExtractor={(item, i) => ''+i}
-          renderItem={({item}) => <FoodItem item={item} />}
-        />
-      }
-      <TouchableRipple style={{ padding: 10, backgroundColor: getCartSize() == totalItems ? 'green' : 'lightgray' }} disabled={getCartSize() != totalItems} onPress={() => {}}>
-        <>
-        <Text style={{ textAlign: 'center', fontSize: 40, fontWeight: 'bold' }}>{getCartSize()}/{totalItems}</Text>
-        <Text style={{ textAlign: 'center' }}>items added</Text>
-        </>
-      </TouchableRipple>
-    </View>
+    <>
+    { loading !== 1 ?
+      <View style={styles.expand}>
+        <View style={styles.row}>
+          <NavBtn text="To do" active={tab == 'todo'} onPress={() => setTab('todo')} />
+          <NavBtn text="Added to cart" active={tab == 'cart'} onPress={() => setTab('cart')} />
+        </View>
+        {
+          tab == 'todo' ?
+          <SectionList
+            style={styles.expand}
+            sections={todo}
+            keyExtractor={(item, i) => ''+i}
+            renderItem={({item}) => <FoodItem item={item} allowAdd onAdd={() => removeItem(item)} />}
+            renderSectionHeader={renderSectionHeader}
+          />
+          :
+          <FlatList
+            style={styles.expand}
+            data={cart}
+            keyExtractor={(item, i) => ''+i}
+            renderItem={({item}) => <FoodItem item={item} />}
+          />
+        }
+        <TouchableRipple 
+          style={{ padding: 10, backgroundColor: getCartSize() == totalItems ? 'green' : 'lightgray' }} 
+          disabled={getCartSize() != totalItems} 
+          onPress={nextScreen}
+        >
+          <>
+          <Text style={{ textAlign: 'center', fontSize: 40, fontWeight: 'bold' }}>{getCartSize()}/{totalItems}</Text>
+          <Text style={{ textAlign: 'center' }}>items added</Text>
+          </>
+        </TouchableRipple>
+
+        {
+          loading === true &&
+          <View style={{ position: 'absolute', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', zIndex: 5, backgroundColor: '#00000033' }}>
+            <Text style={{  }}>Loading</Text>
+          </View>
+        }
+      </View> 
+      :
+      <Confirmation 
+        text="Order has been completed"
+      />
+    }
+    </>
   )
 }
 

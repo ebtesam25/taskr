@@ -10,6 +10,7 @@ import { Button } from 'react-native-paper';
 import { testTask } from '../data/data'
 import { FlatList } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
 
 const TaskItem = ({ task }) => {
   const [place, setPlace] = useState(null)
@@ -78,8 +79,16 @@ export default ({ route, navigation }) => {
     task = route.params.task
   return (
     <View style={styles.container}>
-      <View style={styles.map}>
-        <Text> MAP goes here </Text>
+      <View style={{height: 400, width: 400}}>
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          region={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
       </View>
       <View style={styles.details}>
         <FlatList
