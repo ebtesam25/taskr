@@ -65,8 +65,8 @@ export default function Vehicledoc() {
         <View style={styles.container}>
             <View style={{ marginTop: '10%' }}>
                 <Text style={{
-                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center'
-                }}>Car Registration Doc</Text>
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center', color:'#333366'
+                }}>Vehicle Registration</Text>
             </View>
             <View style={{flexDirection:'column', height:'40%', alignSelf:'center', marginTop:'10%', marginBottom:'25%'}}>
                 <View>
@@ -76,16 +76,16 @@ export default function Vehicledoc() {
                 
             </View>
             <Text style={{
-                    fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
-                    marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:5,
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'center',
+                    marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#33CC99', color:'#333366',
+                    paddingVertical:'2.5%',
                 }} onPress={()=>{navigation.navigate('Profileset4')}}>Next</Text>
             <View style={{display:'flex', flexDirection:'row', alignSelf:'center', marginLeft:'10%'}}>
             <Svg height="20" width="200"
                     style={{
                         alignSelf: 'center', marginTop: '15%'
                     }}>
-                        <Line x1="0" y1="0" x2="160" y2="0" stroke="#074EE8" strokeWidth="10"/>
+                        <Line x1="0" y1="0" x2="160" y2="0" stroke="#333366" strokeWidth="10"/>
                         <Line x1="160" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
                 </Svg>
             </View>

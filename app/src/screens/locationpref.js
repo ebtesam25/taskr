@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, Button, Animated } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Svg, { Line } from 'react-native-svg';
 import { Icon, Slider } from 'react-native-elements';
+import {Chip} from 'react-native-paper';
 import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
 
@@ -36,8 +37,12 @@ export default function Locationpref() {
         <View style={styles.container}>
             <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center', marginTop:'20%'
-                }}>Location Preference</Text>
+                }}>Preferences</Text>  
+                <Text style={{
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 20, textAlign: 'center', marginTop:'2%'
+                }}>Task Radius</Text>
             <View style={styles.header}>
+          
                 <MapView style={styles.map}
                 initialRegion={{
                     latitude: location.coords.latitude,
@@ -52,7 +57,7 @@ export default function Locationpref() {
                         center = { coords }
                         radius = { radius }
                         strokeWidth = { 2 }
-                        strokeColor = { '#1a66ff' }
+                        strokeColor = { '#33CC99' }
                         fillColor = { 'rgba(177,238,246,0.25)' }
                     />
                 </MapView>
@@ -71,18 +76,19 @@ export default function Locationpref() {
                             size={10}
                             reverse
                             containerStyle={{ bottom: 20, right: 20 }}
-                            color="#074EE8"
+                            color="#33CC99"
                           />
                         ),
                       }}
                 />
                 <Text style={{fontFamily:'Roboto', fontSize:15, fontWeight:'bold', position:'absolute',zIndex:2, top:360, left:175}}>{radius.toFixed(0)} miles</Text>
             </View>
+        
             <View style={{ marginTop: '5%' }}>
                 <Text style={{
-                    fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
-                    marginHorizontal: '15%', marginTop: '5%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:5
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'center',
+                    marginHorizontal: '15%', marginTop: '5%', backgroundColor:'#33CC99', color:'#333366',
+                    paddingVertical:'2.5%'
                 }} onPress={()=>{console.log('Here');}}>Next</Text>
                  
             </View>
@@ -92,7 +98,7 @@ export default function Locationpref() {
                         alignSelf: 'center', marginTop: '15%'
                     }}>
                         <Line x1="0" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
-                        <Line x1="150" y1="0" x2="200" y2="0" stroke="#074EE8" strokeWidth="10"/>  
+                        <Line x1="150" y1="0" x2="200" y2="0" stroke="#333366" strokeWidth="10"/>  
                 </Svg>
             </View>
         </View>

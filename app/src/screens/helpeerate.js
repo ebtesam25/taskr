@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import Svg, { Line } from 'react-native-svg';
 import { Icon, Rating, AirbnbRating} from 'react-native-elements'
 import { round } from 'react-native-reanimated';
-import {ActivityIndicator, Colors, RadioButton} from 'react-native-paper';
+import {ActivityIndicator, Avatar, Colors, RadioButton} from 'react-native-paper';
 import DropDownPicker from 'react-native-dropdown-picker';
 
 
@@ -29,8 +29,8 @@ export default function Helpeerate() {
                 }}>How was John Doe?</Text>
             </View>
             {step==1 &&
-            <View style={{marginHorizontal:'10%', height:'50%'}}>
-                <Image source={require('../assets/img.jpg')} style={styles.header}></Image>
+            <View style={{marginHorizontal:'10%', height:'50%', alignContent:'center', alignItems:'center'}}>
+                 <Avatar.Image style={{backgroundColor:'#33CC99', marginTop:'5%'}} size={150}  source={require('../assets/addimg.png')} />
                 <Text style={{fontWeight:'900', textAlign:'center', fontSize:17, marginTop:'15%'}}>Give John Doe a rating</Text>
                 
 
@@ -47,8 +47,8 @@ export default function Helpeerate() {
 
 
             {step==2 &&
-            <View style={{marginHorizontal:'10%', height:'50%'}}>
-                <Image source={require('../assets/img.jpg')} style={styles.header}></Image>
+            <View style={{marginHorizontal:'10%', height:'50%',alignItems:'center'}}>
+                 <Avatar.Image style={{backgroundColor:'#33CC99', marginTop:'5%'}} size={150} source={require('../assets/addimg.png')} />
                 <Text style={{fontWeight:'900', textAlign:'center', fontSize:17, marginTop:'15%'}}>Did John Doe complete everything you asked for?</Text>
                 
 
@@ -62,14 +62,14 @@ export default function Helpeerate() {
                 <Text style={{fontFamily:'Roboto', fontSize:15, fontWeight:'bold', color:'#33CC99', marginLeft:'5%',marginRight:'15%', marginTop:'1.5%'}}>Yes</Text>
                 <RadioButton
                     value="no"
-                    status={ done === 'yes' ? 'checked' : 'unchecked' }
+                    status={ done === 'no' ? 'checked' : 'unchecked' }
                     onPress={() => setDone('no')}
                     color="#33CC99"
                 />
                 <Text style={{fontFamily:'Roboto', fontSize:15, fontWeight:'bold', color:'#33CC99', marginLeft:'1%',marginRight:'15%', marginTop:'1.5%'}}>No</Text>
                 <RadioButton
                     value="kinda"
-                    status={ done === 'yes' ? 'checked' : 'unchecked' }
+                    status={ done === 'kinda' ? 'checked' : 'unchecked' }
                     onPress={() => setDone('kinda')}
                     color="#33CC99"
                 />
@@ -79,7 +79,7 @@ export default function Helpeerate() {
             </View>}
             {step==3 &&
             <View style={{marginHorizontal:'10%', height:'50%'}}>
-                <Image source={require('../assets/img.jpg')} style={styles.header}></Image>
+                 <Avatar.Image style={{backgroundColor:'#33CC99', marginTop:'5%', alignSelf:'center'}} size={150} source={require('../assets/addimg.png')} />
                 <Text style={{fontWeight:'900', textAlign:'center', fontSize:17, marginTop:'15%'}}>Did John Doe complete everything you asked for?</Text>
                 
 
@@ -91,7 +91,7 @@ export default function Helpeerate() {
             </View>}
             {step==4 &&
             <View style={{marginHorizontal:'10%', height:'50%'}}>
-                <Image source={require('../assets/img.jpg')} style={styles.header}></Image>
+                 <Avatar.Image style={{backgroundColor:'#33CC99', marginTop:'5%', alignSelf:'center'}} size={150} source={require('../assets/addimg.png')} />
                 <Text style={{fontWeight:'900', textAlign:'center', fontSize:17, marginTop:'15%'}}>Leave John Doe a tip</Text>
                 
 

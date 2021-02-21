@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, Button, ScrollView, SafeAreaView, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Svg, { Line } from 'react-native-svg';
@@ -10,22 +10,22 @@ import DropDownPicker from 'react-native-dropdown-picker';
 
      
 
-const Item = ({ title }) => {
+const Item = ({ title,img,price }) => {
     const navigation = useNavigation();
-    const [quantity,setQuantity] = useState();
+    const [quantity,setQuantity] = useState('');
+    
     return(
     <View style={{marginBottom:40, marginRight:20, flexDirection:'row'}}>
          
-                <Image source={require('../assets/img.jpg')} style={styles.header}></Image>
+                <Image source={img} style={styles.header}></Image>
                 <View style={{marginLeft:'5%',}} >
                     <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 25, textAlign: 'left',
                     
                     
-                }} onPress={()=>{navigation.navigate('Profileset1')}}>${title.toString()}</Text>
+                }} onPress={()=>{navigation.navigate('Profileset1')}}>${price.toString()}</Text>
                 
-                    <Text style={{fontFamily:'Roboto', fontSize:15}}>Brand</Text>
-                    <Text style={{fontFamily:'Roboto', fontSize:15}}>Item name</Text>
+                    <Text style={{fontFamily:'Roboto', fontSize:15}}>{title}</Text>
                     
                 </View>
                 <DropDownPicker
@@ -41,7 +41,7 @@ const Item = ({ title }) => {
                             justifyContent: 'flex-start'
                         }}
                         dropDownStyle={{backgroundColor: '#fafafa'}}
-                        onChangeItem={item => setQuantity(item)}
+                        onChangeItem={item => setQuantity(item.value)}
                         placeholder={'Quantity'}
                         placeholderStyle={{color:'#66FFCC'}}
                     />
@@ -53,37 +53,67 @@ const Item = ({ title }) => {
 export default function Helpee4() {
     const navigation = useNavigation();
     const [searchQuery, setSearchQuery] = useState('');
-    const [total, setTotal] = useState(0);
+    const [total, setTotal] = useState(17.24);
     const onChangeSearch = query => setSearchQuery(query);
     const [visible, setVisible] = React.useState(false);
-  
+    useEffect(()=> {
+        calcTotal();
+    });
+    const calcTotal = ()=>{
+        let i=0;
+        let sum=0;
+        for (i=0;i<5;i++){
+            sum = sum + DATA[i].price;
+            console.log(sum);
+            setTotal(sum)
+        }
+    }
     const showModal = () => setVisible(true);
     const hideModal = () => setVisible(false);
     const DATA = [
         {
           id: '1',
-          title: 3.75,
+          price: 3.75,
+          title:'Apples',
+          quantity:6,
+          img:require('../assets/food/apple.jpg'),
         },
         {
           id: '2',
-          title: 10.10,
+          price: 5.15,
+          title:'Oranges',
+          quantity:6,
+          img:require('../assets/food/orange.jpg'),
+
         },
         {
             id: '3',
-            title: 3.14,
+            price: 3.14,
+            title:'Fruit Punch',
+            quantity:6,
+            img:require('../assets/food/fruitpunch.jpg'),
+
           },
           {
             id: '4',
-            title: 40.21,
+            price: 1.21,
+            title:'Coke',
+            quantity:6,
+            img:require('../assets/food/coke.jpg'),
+
           },
           {
             id: '5',
-            title: 3.99,
+            price: 3.99,
+            title:'Fruit Punch',
+            quantity:6,
+            img:require('../assets/food/fruitpunch.jpg'),
+
           },
       ];
     const renderItem = ({ item }) =>
         (
-        <Item title={item.title} />
+        <Item title={item.title} img={item.img} price={item.price} />
       );
 
     return (
@@ -91,7 +121,7 @@ export default function Helpee4() {
         <Portal> 
            
             <View style={{marginTop:'10%', marginHorizontal:'7.5%', flexDirection:'row'}}>
-                <Text><Icon name="hearto" type="ant-design" size={25} ></Icon></Text>
+                <Text><Icon name="hearto" type="ant-design" size={25}  ></Icon></Text>
                 <Text style={{textAlign:'right', marginLeft:300}}><Icon name="shoppingcart" type="ant-design" size={20}></Icon></Text>
             </View>
            
@@ -100,8 +130,8 @@ export default function Helpee4() {
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, paddingVertical:'1.5%', textAlign: 'left', paddingLeft:'10%',
                 }}>Your Cart</Text>
                 <Text style={{
-                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, paddingVertical:'1.5%', textAlign: 'right', paddingLeft:'10%', marginLeft:'20%',
-                }}>${total}</Text>
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, paddingVertical:'1.5%', textAlign: 'right', paddingLeft:'10%', marginLeft:'10%',
+                }}>${total.toFixed(2)}</Text>
             </View>
             <SafeAreaView style={{ position:'relative', flex:1, alignSelf:'center', width:360, marginTop:'10%'}}>
                 <FlatList  scrollEnabled={true} 
@@ -160,8 +190,6 @@ const styles = StyleSheet.create({
     header: {
         height: 100,
         width: 100,
-        borderWidth:2,
-        borderColor:'#000',
         resizeMode: 'contain',
         alignSelf: 'center',
     },

@@ -6,11 +6,11 @@ import { Icon } from 'react-native-elements'
 import { round } from 'react-native-reanimated';
 
 
-const Item = ({ title }) =>{ 
+const Item = ({ title, img }) =>{ 
     const navigation = useNavigation(); 
     return(
     <View style={{marginRight:40}}>
-                <Image source={require('../assets/placeholder.png')} style={styles.header}></Image>
+                <Image source={img} style={styles.header}></Image>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 25, textAlign: 'center',
                     
@@ -25,14 +25,17 @@ export default function Helpee1() {
         {
           id: '1',
           title: 'Groceries',
+          img:require('../assets/grocery.jpg'),
         },
         {
           id: '2',
           title: 'Library Book',
+          img:require('../assets/library.jpg'),
+
         },
       ];
     const renderItem = ({ item }) => (
-        <Item title={item.title} />
+        <Item title={item.title} img={item.img}/>
       );
     return (
         <View style={styles.container}>
@@ -65,7 +68,7 @@ export default function Helpee1() {
                         alignSelf: 'center', marginTop: '15%'
                     }}>
                         <Line x1="0" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
-                        <Line x1="50" y1="0" x2="100" y2="0" stroke="#074EE8" strokeWidth="10"/>  
+                        <Line x1="50" y1="0" x2="100" y2="0" stroke="#333366" strokeWidth="10"/>  
                 </Svg>
                 <Text onPress={()=>{navigation.navigate('Orienthree')}} style={{marginTop:'12.5%', marginLeft:'7.5%'}}><Icon name='arrowright' type="ant-design" color='#323232' /></Text>
             </View>
@@ -85,7 +88,7 @@ const styles = StyleSheet.create({
     header: {
         height: 400,
         width: 200,
-        resizeMode: 'contain',
+        resizeMode: 'cover',
         alignSelf: 'center',
     },
 

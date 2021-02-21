@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Svg, { Line } from 'react-native-svg';
 import { Icon } from 'react-native-elements'
@@ -9,7 +9,8 @@ export default function Welcome() {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/img.jpg')} style={styles.header}></Image>
+            <ImageBackground style={{height:'100%', width:'100%'}} source={require('../assets/bg1.png')}>
+            <Image source={require('../assets/logo.png')} style={styles.header}></Image>
             <View style={{ marginTop: '10%' }}>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center'
@@ -24,11 +25,11 @@ export default function Welcome() {
                     style={{
                         alignSelf: 'center', marginTop: '15%'
                     }}>
-                        <Line x1="0" y1="0" x2="50" y2="0" stroke="#074EE8" strokeWidth="10"/>
+                        <Line x1="0" y1="0" x2="50" y2="0" stroke="#333366" strokeWidth="10"/>
                         <Line x1="50" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
                 </Svg>
                 <Text onPress={()=>{navigation.navigate('Orientwo')}} style={{marginTop:'12.5%', marginLeft:'7.5%'}}><Icon name='arrowright' type="ant-design" color='#323232' /></Text>
-            </View>
+            </View></ImageBackground>
         </View>
     );
 

@@ -18,26 +18,26 @@ export default function Login() {
                 }}>Email or username</Text>
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%', borderWidth:2, paddingLeft:'5%'
                 }}></TextInput>
 
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676'
                 }}>Password</Text>
                 <TextInput style={{
-                    fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'left',
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%', borderWidth:2, paddingLeft:'5%'
                 }}></TextInput>
                 {!error &&
                 <Text style={{
                     color:'#EB5757', fontFamily:'Roboto', fontSize:15, textAlign:'center'
                 }}>Wrong username or password.</Text>}
                 <Text style={{
-                    fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
-                    marginHorizontal: '20%', marginTop: '5%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:5
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'center',
+                    marginHorizontal: '20%', marginTop: '5%', backgroundColor:'#33CC99', color:'#333366',
+                    paddingVertical:'2.5%'
                 }} onPress={()=>{navigation.navigate('Locationpref')}}>Login</Text>
             </View>
             <View style={{display:'flex', flexDirection:'row', alignSelf:'center'}}>

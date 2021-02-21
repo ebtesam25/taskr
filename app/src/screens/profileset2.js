@@ -14,67 +14,67 @@ export default function Profileset2() {
         <View style={styles.container}>
             <View style={{ marginTop: '10%' }}>
             <Text style={{
-                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center', marginTop:'5%'
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center', marginTop:'5%', color:'#333366'
                 }}>Profile Setup</Text>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676', marginTop:'10%'
                 }}>First Name</Text>
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
-                }}></TextInput>
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%',  borderWidth:2, paddingLeft:'5%'
+                }} placeholderTextColor="#33CC99"></TextInput>
 
                  <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676'
                 }}>Last Name</Text>
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
-                }}></TextInput>
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%',  borderWidth:2, paddingLeft:'5%'
+                }} placeholderTextColor="#33CC99"></TextInput>
 
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676', marginTop:'7.5%'
-                }} placeholder="MM/DD/YYYY">Birthday</Text>
+                }} >Birthday</Text>
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
-                }}></TextInput>
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%',  borderWidth:2, paddingLeft:'5%'
+                }} placeholderTextColor="#33CC99"placeholder="MM/DD/YYYY"></TextInput>
                
                 <View style={{flexDirection:'row', marginLeft:'10%', marginTop:'10%'}}>
                 <RadioButton
                     value="male"
                     status={ checked === 'male' ? 'checked' : 'unchecked' }
                     onPress={() => setChecked('male')}
-                    color="#074EE8"
+                    color="#33CC99"
                 />
-                <Text style={{fontFamily:'Roboto', fontSize:15, marginLeft:'1%', marginTop:'1.5%'}}>Male</Text></View>
+                <Text style={{fontFamily:'Roboto', fontSize:15, marginLeft:'1%', marginTop:'1.5%', fontWeight:'bold', color:'#33CC99'}}>Male</Text></View>
                 <View style={{flexDirection:'row', marginLeft:'10%'}}>
                 <RadioButton
                     value="female"
                     status={ checked === 'female' ? 'checked' : 'unchecked' }
                     onPress={() => setChecked('female')}
-                    color="#074EE8"
+                    color="#33CC99"
                 />
-                <Text style={{fontFamily:'Roboto', fontSize:15, marginLeft:'1%', marginTop:'1.5%'}}>Female</Text></View>
+                <Text style={{fontFamily:'Roboto', fontSize:15, marginLeft:'1%', marginTop:'1.5%', fontWeight:'bold', color:'#33CC99'}}>Female</Text></View>
                 <View style={{flexDirection:'row', marginLeft:'10%'}}>
                 <RadioButton
                     value="other"
                     status={ checked === 'other' ? 'checked' : 'unchecked' }
                     onPress={() => setChecked('other')}
-                    color="#074EE8"
+                    color="#33CC99"
                 />
-                <Text style={{fontFamily:'Roboto', fontSize:15, marginLeft:'1%', marginTop:'1.5%'}}>Other</Text></View>
+                <Text style={{fontFamily:'Roboto', fontSize:15, marginLeft:'1%', marginTop:'1.5%', fontWeight:'bold', color:'#33CC99'}}>Other</Text></View>
                
 
               
                 <Text style={{
-                    fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
-                    marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:5
-                }} onPress={()=>{navigation.navigate('Vehicletype')}}>Next</Text>
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'center',
+                    marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#33CC99', color:'#333366',
+                    paddingVertical:'2.5%'
+                }} onPress={()=>{navigation.navigate('Profileset3')}}>Next</Text>
             </View>
            
             <View style={{display:'flex', flexDirection:'row', alignSelf:'center', marginLeft:'10%'}}>
@@ -82,7 +82,7 @@ export default function Profileset2() {
                     style={{
                         alignSelf: 'center', marginTop: '15%'
                     }}>
-                        <Line x1="0" y1="0" x2="80" y2="0" stroke="#074EE8" strokeWidth="10"/>
+                        <Line x1="0" y1="0" x2="80" y2="0" stroke="#333366" strokeWidth="10"/>
                         <Line x1="80" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
                 </Svg>
             </View>

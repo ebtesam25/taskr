@@ -13,49 +13,49 @@ export default function Profileset1() {
         <View style={styles.container}>
             <View style={{ marginTop: '10%' }}>
             <Text style={{
-                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center', marginTop:'5%'
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center', marginTop:'5%', color:'#333366',
                 }}>Profile setup</Text>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676', marginTop:'10%'
                 }}>Email</Text>
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
-                }}></TextInput>
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%',  borderWidth:2, paddingLeft:'5%'
+                }} placeholderTextColor="#33CC99"></TextInput>
 
                  <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676'
                 }}>Confirm Email</Text>
                 <TextInput style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
-                }}></TextInput>
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%',  borderWidth:2, paddingLeft:'5%'
+                }} placeholderTextColor="#33CC99"></TextInput>
 
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676', marginTop:'7.5%'
                 }}>Password</Text>
-                <TextInput style={{
+                <TextInput secureTextEntry style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
-                }}></TextInput>
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%',  borderWidth:2, paddingLeft:'5%'
+                }} placeholderTextColor="#33CC99"></TextInput>
                 
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left', marginHorizontal:'10%', color:'#767676'
                 }}>Confirm Password</Text>
-                <TextInput style={{
+                <TextInput secureTextEntry style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'left',
-                    marginHorizontal: '10%', marginTop: '1.5%', borderColor:'#AAAAAA', color:'#000',
-                    paddingVertical:'2.5%', borderRadius:5, borderWidth:2, paddingLeft:'5%'
-                }} ></TextInput>
+                    marginHorizontal: '10%', marginTop: '1.5%', backgroundColor:'#333366', color:'#33CC99',
+                    paddingVertical:'2.5%',  borderWidth:2, paddingLeft:'5%'
+                }} placeholderTextColor="#33CC99" ></TextInput>
 
               
                 <Text style={{
-                    fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
-                    marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:5
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'center',
+                    marginHorizontal: '20%', marginTop: '15%', backgroundColor:'#33CC99', color:'#333366',
+                    paddingVertical:'2.5%',
                 }} onPress={()=>{navigation.navigate('Profileset2')}}>Next</Text>
             </View>
            
@@ -64,7 +64,7 @@ export default function Profileset1() {
                     style={{
                         alignSelf: 'center', marginTop: '15%'
                     }}>
-                        <Line x1="0" y1="0" x2="40" y2="0" stroke="#074EE8" strokeWidth="10"/>
+                        <Line x1="0" y1="0" x2="40" y2="0" stroke="#333366" strokeWidth="10"/>
                         <Line x1="40" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
                 </Svg>
             </View>

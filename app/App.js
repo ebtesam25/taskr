@@ -36,6 +36,7 @@ import Helpee7 from './src/screens/helpee7';
 import Helpeerate from './src/screens/helpeerate';
 import HelpeeRateSubmit from './src/screens/helpeeratesubmit';
 import Helpeemap from './src/screens/helpeemap';
+import Payitf1 from './src/screens/payitf1';
 
 const Stack = createStackNavigator();
 useTestData()
@@ -163,6 +164,11 @@ function MyStack() {
       <Stack.Screen 
         name="Helpeemap" 
         component={Helpeemap} 
+        options={{ headerShown: false}} 
+      />
+      <Stack.Screen 
+        name="Payitf1" 
+        component={Payitf1} 
         options={{ headerShown: false}} 
       />
        

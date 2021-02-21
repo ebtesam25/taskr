@@ -9,26 +9,26 @@ export default function Profileallset() {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <Image source={require('../assets/img.jpg')} style={styles.header}></Image>
+            <Image source={require('../assets/logo.png')} style={styles.header}></Image>
             <View style={{ marginTop: '10%' }}>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 40, textAlign: 'center'
-                }}>Complete/Welcome!</Text>
+                }}>You're all set!</Text>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '10%', marginTop: '2.5%'
                 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed.</Text>
             </View>
             <Text style={{
-                    fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
-                    marginHorizontal: '20%', marginTop: '10%', backgroundColor:'#074EE8', color:'#FFF',
-                    paddingVertical:'2.5%', borderRadius:5
-                }} onPress={()=>{navigation.navigate('Helpee1')}}>Start Running Tasks</Text>
+                    fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'center',
+                    marginHorizontal: '20%', marginTop: '10%', backgroundColor:'#33CC99', color:'#333366',
+                    paddingVertical:'2.5%'
+                }} onPress={()=>{navigation.navigate('Helpee1')}}>Pick your tasks</Text>
             <Svg height="20" width="200"
                     style={{
                         alignSelf: 'center', marginTop: '15%'
                     }}>
-                        <Line x1="0" y1="0" x2="200" y2="0" stroke="#074EE8" strokeWidth="10"/>
+                        <Line x1="0" y1="0" x2="200" y2="0" stroke="#333366" strokeWidth="10"/>
                         
                 </Svg>
                 

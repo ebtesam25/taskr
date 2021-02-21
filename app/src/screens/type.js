@@ -16,7 +16,7 @@ export default function Type() {
             </View>
             <View style={{flexDirection:'row', height:'60%', alignSelf:'center', marginTop:'10%', marginLeft:'5%'}}>
                 <View>
-                <Image source={require('../assets/placeholder.png')} style={styles.header}></Image>
+                <Image source={require('../assets/helpee.jpg')} style={styles.header}></Image>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 25, textAlign: 'center',
                     marginHorizontal: '10%', marginTop: '2.5%'
@@ -24,7 +24,7 @@ export default function Type() {
                 </View>
 
                 <View>
-                <Image source={require('../assets/placeholder.png')} style={styles.header}></Image>
+                <Image source={require('../assets/taskrunner.jpg')} style={styles.header}></Image>
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 25, textAlign: 'center',
                     marginHorizontal: '10%', marginTop: '2.5%'
@@ -38,7 +38,7 @@ export default function Type() {
                     style={{
                         alignSelf: 'center', marginTop: '15%'
                     }}>
-                        <Line x1="0" y1="0" x2="40" y2="0" stroke="#074EE8" strokeWidth="10"/>
+                        <Line x1="0" y1="0" x2="40" y2="0" stroke="#333366" strokeWidth="10"/>
                         <Line x1="40" y1="0" x2="200" y2="0" stroke="#EEEEEE" strokeWidth="10" />
                 </Svg>
             </View>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     header: {
         height: 400,
         width: 150,
-        resizeMode: 'contain',
+        resizeMode:'cover',
         alignSelf: 'center'
     },
 
