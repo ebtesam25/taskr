@@ -3,10 +3,10 @@ import { storeItem, deleteItem } from '../util'
 export const testTask = {
   payment: 20,
   taskList: [
-    {helpeeUid: 'helpee1', taskName: 'shopping', placeId: '0'},
-    {helpeeUid: 'helpee2', taskName: 'library', placeId: '1'},
-    {helpeeUid: 'helpee1', taskName: 'home'},
-    {helpeeUid: 'helpee2', taskName: 'home'},
+    {helpeeUid: 'helpee1', type: 'shopping', placeId: '0'},
+    {helpeeUid: 'helpee2', type: 'library', placeId: '1'},
+    {helpeeUid: 'helpee1', type: 'home'},
+    {helpeeUid: 'helpee2', type: 'home'},
   ],
   timeEst: 30,
 }

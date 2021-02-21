@@ -23,7 +23,7 @@ const TaskItems = ({ taskList }) => {
         return (
           <React.Fragment key={i}>
             { i !== 0 && <Icon style={taskItemStyles.icon} name="keyboard-arrow-right" size={20} /> }
-            <Icon style={taskItemStyles.icon} name={iconNames[task.taskName]} size={25} />
+            <Icon style={taskItemStyles.icon} name={iconNames[task.type]} size={25} />
           </React.Fragment>
         )
       })  
@@ -44,9 +44,10 @@ const taskItemStyles = StyleSheet.create({
   },
 })
 
-const Task = ({ payment, taskList, timeEst, navigation, style }) => {
+const Task = ({ task, navigation, style }) => {
+  const { payment, taskList, timeEst } = task
   return (
-    <TouchableHighlight onPress={() => navigation.push('TaskDetails')}>
+    <TouchableHighlight onPress={() => navigation.push('TaskDetails', { task })}>
       <View style={[taskStyles.container, style]}>
         <View style={taskStyles.row}>
           <TaskItems taskList={taskList} />
@@ -99,7 +100,7 @@ export default ({ navigation }) => {
   }, [])
 
   const renderTask = ({ index, item: task }) => {
-    return <Task key={index} style={styles.task} navigation={navigation} {...task} />
+    return <Task key={index} style={styles.task} navigation={navigation} task={task} />
   };
 
   return (
