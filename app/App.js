@@ -21,6 +21,9 @@ import Profileset2 from './src/screens/profileset2';
 import Profileset3 from './src/screens/profileset3';
 import Profileset4 from './src/screens/prpfileset4';
 import Profileallset from './src/screens/profileallset';
+import MapNav from './src/screens/map_nav';
+
+import colors from './src/colors'
 import Vehicletype from './src/screens/vehicletype';
 import Vehicledoc from './src/screens/vehicledoc';
 import Helpee1 from './src/screens/helpee1';
@@ -177,6 +180,11 @@ function MyStack() {
         name="GroceryList"
         component={GroceryList}
         options={{ title: 'Grocery List', headerTitleAlign: 'center', headerStyle: { elevation: 0, shadowOpacity: 0 } }} 
+      />
+      <Stack.Screen
+        name="MapNav"
+        component={MapNav}
+        options={{ title: 'Navigation', headerTitleAlign: 'center', headerStyle: { backgroundColor: colors.darkBlue }, headerTitleStyle: {color: colors.yellow} }} 
       />
     </Stack.Navigator>
   );
