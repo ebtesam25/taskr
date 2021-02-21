@@ -17,7 +17,8 @@ export default function Profileallset() {
                 <Text style={{
                     fontFamily: 'Roboto', fontWeight: '100', fontSize: 15, textAlign: 'center',
                     marginHorizontal: '10%', marginTop: '2.5%'
-                }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed.</Text>
+                }}>TaskR is like a combination of Uber and Tinder for getting basic day to day things done. It maximizes a taskrunner's income by pooling available tasks nearby and ensures
+                helpees receive the best service through a Tinder-like interface for finding a taskrunner.</Text>
             </View>
             <Text style={{
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 15, textAlign: 'center',

@@ -25,13 +25,13 @@ const Item = ({ title,img, distance, city, amount }) => {
                 }} onPress={()=>{navigation.navigate('Helpee3')}}>{title}</Text>
                 
                     <Text style={{fontFamily:'Roboto', fontSize:15}}>{distance}</Text>
-                    <Text style={{fontFamily:'Roboto', fontSize:15}}>{city}</Text>
+                    <Text style={{fontFamily:'Roboto', fontSize:15, color:'#33CC99'}}>{city}</Text>
                     
                 </View>
                
                 <Text style={{fontFamily:'Roboto', fontSize:25, fontWeight:'bold', textAlign:'right',position:'absolute', left:270}}>${amount}</Text>
                 <View style={{flexDirection:'column', marginTop:'5%', alignSelf:'flex-end', position:'absolute', left:250}}>
-                    <Text style={{fontWeight:'bold', color:'#FFFF99', backgroundColor:'#333366', paddingHorizontal:'2.5%', width:100, textAlign:'center'}} onPress={()=>{showModal()}}>Pay It Forward</Text>
+                    <Text style={{fontWeight:'bold', color:'#FFFF99', backgroundColor:'#333366', paddingHorizontal:'2.5%', width:100, textAlign:'center'}} onPress={()=>{navigation.navigate('Payitf2')}}>Pay It Forward</Text>
                 </View>
                 
        </View>
@@ -48,7 +48,7 @@ export default function Payitf1() {
           title: 'Jane',
           img: require('../assets/walmart.jpg'),
           distance:'Groceries',
-          city:'Drycleaning',
+          city:'Visually Impaired',
           amount:30.51
           
         },
@@ -57,7 +57,7 @@ export default function Payitf1() {
           title: 'Lillia',
           img: require('../assets/target.jpg'),
           distance:'Drycleaning',
-          city:'Gift shopping',
+          city:'Senior citizen',
           amount:20.14
 
         },
@@ -83,7 +83,7 @@ export default function Payitf1() {
             title: 'Elaine',
             img: {uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy7yi9xOhV6iFNqFwhuK2xNtwLgSc_gTql-A&usqp=CAU'},
             distance:'Groceries',
-            city:'Library book',
+            city:'Visually impaired',
             amount:12.05
 
 
