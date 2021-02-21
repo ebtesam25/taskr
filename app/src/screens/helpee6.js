@@ -17,7 +17,7 @@ export default function Helpee6() {
         }, 5000);
         if(confirmed){
             setTimeout(() => {
-                navigation.navigate('Helpee7');
+                navigation.navigate('Helpeemap');
             }, 3000);
         }
       });

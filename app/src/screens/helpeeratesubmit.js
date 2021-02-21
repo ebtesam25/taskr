@@ -34,7 +34,7 @@ export default function HelpeeRateSubmit() {
                     fontFamily: 'Roboto', fontWeight: 'bold', fontSize: 20, textAlign: 'center',
                     marginHorizontal: '20%', marginTop: '10%', marginBottom:'10%', backgroundColor:'#33CC99', color:'#333366',
                     paddingVertical:'2.5%'
-                }}  onPress={()=>{showModal()}}>Home Page</Text></View>}
+                }}  onPress={()=>{navigation.navigate('Helpeemap')}}>Home Page</Text></View>}
             
         </View>
     );
